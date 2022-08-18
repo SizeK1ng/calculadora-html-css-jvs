@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?família=Libre+Baskerville:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 101, 160);
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(0, 30, 48),rgb(0, 153, 255));
+    clip-path: circle(22% at 30% 20%);
+
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(3, 0, 48),rgb(65, 23, 255));
+    clip-path: circle(20% at 70% 90%);
+
+}
+.container{
+    position: relative;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+
+}
+.container .calculadora{
+    position: relative;
+    display: grid;
+}
+.container .calculadora .value{
+    grid-column: span 4;
+    gap: 3px;
+    height: 140px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgb(3, 0, 48);
+}   
+.container .calculadora span
+{
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1x solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    transition: 0.5s;
+}
+.container .calculadora span:hover{
+    transition: 0s;
+    background: rgb(0, 217, 255);
+}
+.container .calculadora .span:active{
+    background: #0084ff;
+    color:#001e30;
+    font-size: 24px;
+    font-weight: 500;
+}
+.container .calculadora .clear
+{
+    grid-column: span 2;
+    width: 150px;
+    background: rgb(0, 217, 255);
+}
+
+.container .calculadora .equal{
+    grid-column: span 3;
+    width: 230px;
+    background: rgb(4, 46, 53);
+}
